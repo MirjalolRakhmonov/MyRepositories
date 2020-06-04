@@ -1,0 +1,6 @@
+C:\Users\e6530\source\repos\ZooApplication\ZooApplication\obj\Debug\ZooApplication.csprojAssemblyReference.cache
+C:\Users\e6530\source\repos\ZooApplication\ZooApplication\bin\Debug\ZooApplication.exe.config
+C:\Users\e6530\source\repos\ZooApplication\ZooApplication\bin\Debug\ZooApplication.exe
+C:\Users\e6530\source\repos\ZooApplication\ZooApplication\bin\Debug\ZooApplication.pdb
+C:\Users\e6530\source\repos\ZooApplication\ZooApplication\obj\Debug\ZooApplication.exe
+C:\Users\e6530\source\repos\ZooApplication\ZooApplication\obj\Debug\ZooApplication.pdb

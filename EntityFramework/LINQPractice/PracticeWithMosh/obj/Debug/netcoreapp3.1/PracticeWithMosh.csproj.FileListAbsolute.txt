@@ -1,0 +1,13 @@
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\bin\Debug\netcoreapp3.1\PracticeWithMosh.exe
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\bin\Debug\netcoreapp3.1\PracticeWithMosh.deps.json
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\bin\Debug\netcoreapp3.1\PracticeWithMosh.runtimeconfig.json
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\bin\Debug\netcoreapp3.1\PracticeWithMosh.runtimeconfig.dev.json
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\bin\Debug\netcoreapp3.1\PracticeWithMosh.dll
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\bin\Debug\netcoreapp3.1\PracticeWithMosh.pdb
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.csprojAssemblyReference.cache
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.AssemblyInfoInputs.cache
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.AssemblyInfo.cs
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.dll
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.pdb
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.csproj.CoreCompileInputs.cache
+C:\Users\e6530\source\repos\PracticeWithMosh\PracticeWithMosh\obj\Debug\netcoreapp3.1\PracticeWithMosh.genruntimeconfig.cache

@@ -1,0 +1,7 @@
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\bin\Debug\LinearSystemEquations.exe.config
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\bin\Debug\LinearSystemEquations.exe
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\bin\Debug\LinearSystemEquations.pdb
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\obj\Debug\LinearSystemEquations.csprojAssemblyReference.cache
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\obj\Debug\LinearSystemEquations.csproj.CoreCompileInputs.cache
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\obj\Debug\LinearSystemEquations.exe
+C:\Users\e6530\source\repos\LinearSystemEquations\LinearSystemEquations\obj\Debug\LinearSystemEquations.pdb

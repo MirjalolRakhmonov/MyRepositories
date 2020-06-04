@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "f87SgCONlTuw0iqcvmMSQhXyDae1xhqpZAeveu03uCXTcAg6aLe532bSflFnyhxnSgyadYesULaucdDZg7nM0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\e6530\\source\\repos\\PracticeWithMosh\\PracticeWithMosh\\PracticeWithMosh.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\e6530\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

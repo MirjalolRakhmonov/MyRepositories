@@ -1,0 +1,5 @@
+C:\Users\e6530\source\repos\Object Oriented Programming Course\Object Oriented Programming Course\bin\Debug\Object Oriented Programming Course.dll
+C:\Users\e6530\source\repos\Object Oriented Programming Course\Object Oriented Programming Course\bin\Debug\Object Oriented Programming Course.pdb
+C:\Users\e6530\source\repos\Object Oriented Programming Course\Object Oriented Programming Course\obj\Debug\Object Oriented Programming Course.csproj.CoreCompileInputs.cache
+C:\Users\e6530\source\repos\Object Oriented Programming Course\Object Oriented Programming Course\obj\Debug\Object Oriented Programming Course.dll
+C:\Users\e6530\source\repos\Object Oriented Programming Course\Object Oriented Programming Course\obj\Debug\Object Oriented Programming Course.pdb

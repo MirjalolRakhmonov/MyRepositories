@@ -1,0 +1,10 @@
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\bin\Debug\HospitalControlPanel.exe.config
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\bin\Debug\HospitalControlPanel.exe
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\bin\Debug\HospitalControlPanel.pdb
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\bin\Debug\HospitalLibrary.dll
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\bin\Debug\HospitalLibrary.pdb
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\obj\Debug\HospitalControlPanel.csprojAssemblyReference.cache
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\obj\Debug\HospitalControlPanel.csproj.CoreCompileInputs.cache
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\obj\Debug\HospitalControlPanel.csproj.CopyComplete
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\obj\Debug\HospitalControlPanel.exe
+C:\Users\e6530\source\repos\HospitalLibrary\HospitalControlPanel\obj\Debug\HospitalControlPanel.pdb

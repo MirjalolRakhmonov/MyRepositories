@@ -1,0 +1,7 @@
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\obj\Debug\OOP Exercise.csprojAssemblyReference.cache
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\obj\Debug\OOP Exercise.csproj.CoreCompileInputs.cache
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\bin\Debug\OOP Exercise.exe.config
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\bin\Debug\OOP Exercise.exe
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\bin\Debug\OOP Exercise.pdb
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\obj\Debug\OOP Exercise.exe
+C:\Users\e6530\source\repos\OOP Exercise\OOP Exercise\obj\Debug\OOP Exercise.pdb
