@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolynomialProject", "PolynomialProject\PolynomialProject.csproj", "{9692A83C-7416-474E-8F11-ACD1117F3B54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9692A83C-7416-474E-8F11-ACD1117F3B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9692A83C-7416-474E-8F11-ACD1117F3B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9692A83C-7416-474E-8F11-ACD1117F3B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9692A83C-7416-474E-8F11-ACD1117F3B54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A455518-2638-431E-8442-C0FBCF53207E}
+	EndGlobalSection
+EndGlobal

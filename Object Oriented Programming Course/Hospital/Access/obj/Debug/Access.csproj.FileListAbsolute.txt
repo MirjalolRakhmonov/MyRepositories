@@ -1,2 +1,0 @@
-C:\Users\e6530\source\repos\Hospital\Access\obj\Debug\Access.csprojAssemblyReference.cache
-C:\Users\e6530\source\repos\Hospital\Access\obj\Debug\Access.csproj.CoreCompileInputs.cache
