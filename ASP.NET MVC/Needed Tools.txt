@@ -1,2 +1,10 @@
 Visual Studio Productivity Power Tools
 Web Essentials
+
+install-package EntityFramework -Version:6.4.0
+
+CTRL+SHIFT+B => to build
+CTRL+R => to refresh page
+ctrl+L= to search website
+
+mvcaction4 and press tab => quick way to create action

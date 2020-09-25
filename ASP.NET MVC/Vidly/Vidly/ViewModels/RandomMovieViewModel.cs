@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using VidlyApp.Models;
+using Vidly.Models;
 
-namespace VidlyApp.ViewModel
+namespace Vidly.ViewModels
 {
     public class RandomMovieViewModel
     {

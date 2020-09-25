@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using VidlyApp.Models;
-using VidlyApp.ViewModel;
+using Vidly.Models;
+using Vidly.ViewModels;
 
-namespace VidlyApp.Controllers
+namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
@@ -14,13 +14,13 @@ namespace VidlyApp.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() {Name = "Venom"};
-            var customers = new List<Customer>()
+            var customers = new List<Customer>
             {
                 new Customer {Name = "Mirjalol"},
                 new Customer {Name = "Another Customer"}
             };
 
-            var viewModel = new RandomMovieViewModel()
+            var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
                 Customers = customers
