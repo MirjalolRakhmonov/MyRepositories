@@ -16,12 +16,22 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
+        public ActionResult Details(int id)
+        {
+            var customer = getCustomers().SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
+        }
+
         private IEnumerable<Customer> getCustomers()
         {
             return new List<Customer>
             {
                 new Customer {Id = 1, Name = "Cristiano Ronaldo"},
-                new Customer {Id = 1, Name = "Elon Musk"}
+                new Customer {Id = 2, Name = "Elon Musk"}
             };
         }
     }

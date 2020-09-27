@@ -6,7 +6,7 @@
     will remain unchanged.
 *@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -26,9 +26,9 @@ else
         <tbody>
             @foreach (var customer in Model)
             {
-                <tr>
-                    <td>@customer.Name</td>
-                </tr>
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+            </tr>
             }
         </tbody>
     </table>

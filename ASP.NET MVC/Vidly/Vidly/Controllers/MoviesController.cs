@@ -35,6 +35,15 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
+        public ActionResult Details(int id)
+        {
+            var movie = GetMovies().SingleOrDefault(m => m.Id == id);
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie);
+        }
+
         private IEnumerable<Movie> GetMovies()
         {
             return new List<Movie>
