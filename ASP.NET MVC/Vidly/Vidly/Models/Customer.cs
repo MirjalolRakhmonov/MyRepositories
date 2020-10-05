@@ -10,15 +10,20 @@ namespace Vidly.Models
     {
 
         public int Id { get; set; }
+
         [Required] // in order to prevent property from being nullable type
         [StringLength(255)]
         public string Name { get; set; }
-
+        [Display(Name = "Date of Birth")]
         public DateTime? Birthdate { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }
+
         // Navigation property
         public MembershipType MembershipType { get; set; }
+
         // ForeignKey property
+        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; } 
+        // Place for comments
     }
 }
