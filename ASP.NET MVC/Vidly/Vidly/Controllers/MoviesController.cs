@@ -23,25 +23,6 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        // GET: Movies/Random
-        public ActionResult Random()
-        {
-            var movie = new Movie() {Name = "Venom"};
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "Mirjalol"},
-                new Customer {Name = "Another Customer"}
-            };
-
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-            return View(viewModel);
-        }
-
         public ViewResult Index()
         {
             var movie = _context.Movies.Include(m=>m.Genre).ToList();
@@ -55,6 +36,25 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             return View(movie);
+        }
+
+        // GET: Movies/Random
+        public ActionResult Random()
+        {
+            var movie = new Movie() { Name = "Venom" };
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Mirjalol"},
+                new Customer {Name = "Another Customer"}
+            };
+
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
     }
 }
