@@ -1,10 +1,14 @@
 ﻿@model IEnumerable<Vidly.Models.Movie>
 @{
-    ViewBag.Title = "Movies";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Movies</h2>
+<p>
+    @Html.ActionLink("New Movie", "New", "Movies", null, new {@class = "btn btn-primary"})
+</p>
+
 @if (!Model.Any())
 {
     <p>There are no movies yet</p>
@@ -15,6 +19,7 @@ else
         <thead>
         <tr>
             <th>Movie</th>
+            <th>Release Year</th>
             <th>Genre</th>
         </tr>
         </thead>
@@ -22,7 +27,13 @@ else
         @foreach (var movie in Model)
         {
             <tr>
-                <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
+                <td>
+                    @if (movie.ReleaseDate != null)
+                    {
+                        @movie.ReleaseDate.Value
+                    }
+                </td>
                 <td>@movie.Genre.Name</td>
             </tr>
         }
