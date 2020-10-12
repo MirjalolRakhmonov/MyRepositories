@@ -227,6 +227,10 @@
     <Compile Include="Migrations\202010032158041_UpdateMovieModel.Designer.cs">
       <DependentUpon>202010032158041_UpdateMovieModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010092242301_MakeReleaseDateNullable.cs" />
+    <Compile Include="Migrations\202010092242301_MakeReleaseDateNullable.Designer.cs">
+      <DependentUpon>202010092242301_MakeReleaseDateNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -238,6 +242,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -303,6 +308,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -359,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010032158041_UpdateMovieModel.resx">
       <DependentUpon>202010032158041_UpdateMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010092242301_MakeReleaseDateNullable.resx">
+      <DependentUpon>202010092242301_MakeReleaseDateNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
