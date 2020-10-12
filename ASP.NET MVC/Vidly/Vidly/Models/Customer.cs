@@ -11,7 +11,7 @@ namespace Vidly.Models
 
         public int Id { get; set; }
 
-        [Required] // in order to prevent property from being nullable type
+        [Required(ErrorMessage = "Please enter customer's name.")] // in order to prevent property from being nullable type
         [StringLength(255)]
         public string Name { get; set; }
         [Display(Name = "Date of Birth")]
