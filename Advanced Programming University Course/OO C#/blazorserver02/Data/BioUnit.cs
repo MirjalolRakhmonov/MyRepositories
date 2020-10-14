@@ -3,10 +3,14 @@ namespace blazorserver02.Data
     public class BioUnit
     {
         protected string color;
+        protected int living;
+        protected int livingTop;
+        protected int hungry;
+        protected int hungryTop;
         public int posx;
         public int posy;
         public Environment parent;
-        private bool alive;
+        //private bool alive;
         public BioUnit(int x, int y, Environment e)
         {
             this.posx = x;
@@ -15,5 +19,6 @@ namespace blazorserver02.Data
             this.parent=e;
         }
         public string mycolor() => this.color;
+        public virtual bool will_I_live()=>true;
     }
 }
