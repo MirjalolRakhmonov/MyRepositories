@@ -2,27 +2,29 @@
 @using System
 
 <h1>Rabbits and Carrots</h1>
-
 <p>Current count: @currentCount</p>
 <hr>
 @{
     //initial pattern
     if(currentCount == 0){
-        @* e.live(3,3); *@
-        @* e.live(3,4); *@
-        @* e.live(3,5); *@
-        @* e.live(2,5); *@
-        @* e.live(1,4); *@
+        u=new Data.Rabbit(3,3);
+        e.insert(3,3,u);
+        u=new Data.Rabbit(3,4);
+        e.insert(3,4,u);
+        u=new Data.Rabbit(3,5);
+        e.insert(3,5,u);
+        u=new Data.Rabbit(2,5);
+        e.insert(2,5,u);
+        u=new Data.Rabbit(1,4);
+        e.insert(1,4,u);
 
-        e.live(2,2); 
-        e.live(3,3); 
-        e.live(3,2); 
-        e.live(2,3); 
 
-        e.live(3,8);
-        e.live(2,8);
-        e.live(1,8);
-
+        u=new Data.Carrot(11,14);
+        e.insert(11,14,u);
+        u=new Data.Carrot(12,14);
+        e.insert(12,15,u);
+        u=new Data.Carrot(13,14);
+        e.insert(13,14,u);
     }
 
 }
@@ -30,7 +32,7 @@
     @for(var i=0; i< @e.total_of_rows(); i++){
         <tr>
             @for(var j=0; j< @e.total_of_cols(); j++){
-                if(e.is_alive(i,j)){
+                if(e.biounit(i,j)!=null){
                     <td class="cell alive"></td>
                 }
                 else
@@ -44,14 +46,13 @@
 <hr>
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 
+
 @code {
     private int currentCount = 0;
-
-    private Data.Environment e = new Data.Environment(15,15);
-
+    private Data.Environment e = new Data.Environment(40,40);
+    private Data.BioUnit u;
     private void IncrementCount()
     {
         currentCount++;
-        e.nextConwayStep();
     }
 }
