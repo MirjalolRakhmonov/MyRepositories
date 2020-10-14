@@ -1,6 +1,7 @@
+using System;
+using System.Collections.Generic;
 namespace blazorserver02.Data
 {
-
     public class Environment
     {
         private int rows = 1;
@@ -33,6 +34,21 @@ namespace blazorserver02.Data
             {
                 this.cell[i, j] = been;
             }
+        }
+
+        public List<BioUnit> neighbors(int i, int j) {
+            List<BioUnit> ans=new List<BioUnit>();
+            if(this.rightPos(i,j)){
+                if(this.rightPos(i-1, j-1) && this.cell[i-1, j-1]!=null) ans.Add(this.cell[i-1, j-1]);
+                if(this.rightPos(i-1, j) && this.cell[i-1, j]!=null) ans.Add(this.cell[i-1, j]);
+                if(this.rightPos(i-1, j+1) && this.cell[i-1, j+1]!=null) ans.Add(this.cell[i-1, j+1]);
+                if(this.rightPos(i, j-1) && this.cell[i, j-1]!=null) ans.Add(this.cell[i, j-1]);
+                if(this.rightPos(i, j+1) && this.cell[i, j+1]!=null) ans.Add(this.cell[i, j+1]);
+                if(this.rightPos(i+1, j-1) && this.cell[i+1, j-1]!=null) ans.Add(this.cell[i+1, j-1]);
+                if(this.rightPos(i+1, j) && this.cell[i + 1, j]!=null) ans.Add(this.cell[i + 1, j]);
+                if(this.rightPos(i+1, j+1) && this.cell[i+1, j+1]!=null) ans.Add(this.cell[i+1, j+1]);
+            }
+            return ans;
         }
         public BioUnit biounit(int i, int j)
         {
