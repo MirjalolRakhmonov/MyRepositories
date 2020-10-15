@@ -16,7 +16,7 @@ namespace Vidly.ViewModels
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Display(Name = "Data added")]
+        [Display(Name = "Release Date")]
         [Required]
         public DateTime? ReleaseDate { get; set; }
 
@@ -39,6 +39,8 @@ namespace Vidly.ViewModels
         public MovieFormViewModel()
         {
             Id = 0;
+            ReleaseDate=DateTime.Now;
+            NumberInStock = 0;
         }
 
         public MovieFormViewModel(Movie movie)
