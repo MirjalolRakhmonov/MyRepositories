@@ -6,6 +6,7 @@ namespace blazorserver02.Data
             this.color = "#fafafa";
             this.living=0;
             this.livingTop=6;
+            this.hungryTop=3;
         }
         public override bool will_I_live()
         {
