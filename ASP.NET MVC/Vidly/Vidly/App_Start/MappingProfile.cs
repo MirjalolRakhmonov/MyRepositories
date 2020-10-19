@@ -26,7 +26,27 @@ namespace Vidly.App_Start
 
             IMapper mapper2 = config.CreateMapper();
             var source2 = new CustomerDto();
-            var des2t = mapper.Map<CustomerDto, Customer>(source2);
+            var dest2 = mapper.Map<CustomerDto, Customer>(source2);
+
+            // AutoMapper for Movies
+            var configForMovies=new MapperConfiguration(cfg => {
+                cfg.CreateMap<Movie, MovieDto>();
+            });
+
+            IMapper mapperForMovies = configForMovies.CreateMapper();
+            var sourceForMovies=new Movie();
+            var destForMovies = mapperForMovies.Map<Movie, MovieDto>(sourceForMovies);
+            
+
+            var configForMovies2=new MapperConfiguration(cfg => {
+                cfg.CreateMap<MovieDto, Movie>();
+            });
+
+            IMapper mapperForMovies2 = configForMovies.CreateMapper();
+            var sourceForMovies2=new MovieDto();
+            var destForMovies2 = mapperForMovies.Map<MovieDto, Movie>(sourceForMovies2);
+
+
         }
     }
 }
