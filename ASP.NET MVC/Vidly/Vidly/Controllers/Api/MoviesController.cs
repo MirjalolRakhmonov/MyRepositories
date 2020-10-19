@@ -24,27 +24,27 @@ namespace Vidly.Controllers.Api
         }
 
         // GET/api/movies/1
-        public Movie GetMovie(int id)
+        public IHttpActionResult GetMovie(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
 
-            if(movie==null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+            if (movie == null)
+                return NotFound();
 
-            return movie;
+            return Ok(movie);
         }
 
         // POST/api/movies
         [HttpPost]
-        public Movie CreateMovie(Movie movie)
+        public IHttpActionResult CreateMovie(Movie movie)
         {
-            if(!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            if (!ModelState.IsValid)
+                return BadRequest();
 
             _context.Movies.Add(movie);
             _context.SaveChanges();
 
-            return movie;
+            return Created(new Uri(Request.RequestUri + "/" + movie.Id), movie);
         }
 
         // PUT/api/movies/1
