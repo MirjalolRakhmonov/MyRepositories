@@ -15,7 +15,7 @@ namespace Vidly.Controllers.Api
 
         public CustomersController()
         {
-            _context=new ApplicationDbContext();
+            _context = new ApplicationDbContext();
         }
 
         // GET /api/customers
@@ -50,15 +50,15 @@ namespace Vidly.Controllers.Api
 
         // PUT /api/customers/1
         [System.Web.Http.HttpPut]
-        public void UpdateCustomer(int id, Customer customer)
+        public IHttpActionResult UpdateCustomer(int id, Customer customer)
         {
             if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadGateway);
+                return BadRequest();
 
             var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
 
-            if(customerInDb==null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+            if (customerInDb == null)
+                return NotFound();
 
             customerInDb.Name = customer.Name;
             customerInDb.Birthdate = customer.Birthdate;
@@ -66,19 +66,23 @@ namespace Vidly.Controllers.Api
             customerInDb.MembershipTypeId = customer.MembershipTypeId;
 
             _context.SaveChanges();
+
+            return Ok();
         }
 
         // DELETE /api/customers/1
         [System.Web.Http.HttpDelete]
-        public void DeleteCustomer(int id)
+        public IHttpActionResult DeleteCustomer(int id)
         {
             var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customerInDb == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
 
             _context.Customers.Remove(customerInDb);
             _context.SaveChanges();
+
+            return Ok();
         }
     }
 }
