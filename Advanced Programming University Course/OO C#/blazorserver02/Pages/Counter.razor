@@ -17,7 +17,10 @@ value="many"
 </p>
 
 <div style="display:@(theRadio.Equals("many")?"":"none")">
-    <h2>Hello World from Hidden Section </h2>
+    <h5>Cycles specification </h5>
+    Number of cycles:
+    <input @bind="cyclesPerTime" /> (internal value: @cyclesPerTime)
+    <hr>
 </div>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
@@ -56,6 +59,7 @@ value="many"
 
 
 @code {
+    private int cyclesPerTime=0;
     private int currentCount = 0;
 
 
