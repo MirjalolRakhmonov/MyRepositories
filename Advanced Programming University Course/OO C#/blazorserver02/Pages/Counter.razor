@@ -16,6 +16,10 @@ value="many"
     @onchange="ClickRadio"/> Several steps
 </p>
 
+<div style="display:@(theRadio.Equals("many")?"":"none")">
+    <h2>Hello World from Hidden Section </h2>
+</div>
+
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 <a class="btn btn-primary" target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_life">Look for
     Patterns in Wikipedia
