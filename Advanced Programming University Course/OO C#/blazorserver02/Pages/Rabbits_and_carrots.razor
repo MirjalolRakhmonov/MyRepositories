@@ -41,8 +41,8 @@
     @for(var i=0; i< @e.total_of_rows(); i++){
         <tr>
             @for(var j=0; j< @e.total_of_cols(); j++){
-                if(e.biounit(i,j)!=null){
-                    <td class="cell" style="background-color:@e.biounit(i,j).mycolor()"></td>
+                if(e.bioUnit(i,j)!=null){
+                    <td class="cell" style="background-color:@e.bioUnit(i,j).myColor()"></td>
                 }
                 else
                 {
@@ -58,8 +58,8 @@
 
 @code {
     private int currentCount = 0;
-    private Data.Environment e = new Data.Environment(40,40);
-    private Data.BioUnit u;
+    private Data.RabbitsAndCarrots.Environment e = new Data.RabbitsAndCarrots.Environment(40,40);
+    private Data.RabbitsAndCarrots.BioUnit u;
     private void IncrementCount()
     {
         currentCount++;

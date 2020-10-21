@@ -1,16 +1,15 @@
+
 namespace blazorserver02.Data
 {
-    public class Carrot : Data.BioUnit
+    public class Carrot : Data.RabbitsAndCarrots.BioUnit
     {
-        public Carrot(int x, int y, Data.Environment e) : base(x, y,e) {
-            this.color = "#fa5511";
-            this.living=0;
-            this.livingTop=3;
-        }
-        public override bool will_I_live(){
-            this.living++;
-            if((this.living-1)>=this.livingTop) return false;
-            return true;
+        private int living = 0;
+        private int livingTop = 3;
+        public Carrot(int x, int y, Data.RabbitsAndCarrots.Environment e) : base(x, y, e, "#fa5511") { }
+
+        public override bool will_i_live()
+        {
+            return this.living++ < this.livingTop;
         }
     }
 }
