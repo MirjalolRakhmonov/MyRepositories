@@ -1,9 +1,20 @@
 ﻿@page "/game-of-life"
 
 <h1>Game Of Live</h1>
-<p>Current count: @currentCount</p>
-
+<p>Current count: @currentCount and current radio @theRadio</p>
 <hr />
+
+<hr>
+<p>
+    <input type="radio" name="myradiobtn"
+    checked="@(theRadio.Equals("step"))"
+    value="step"
+    @onchange="ClickRadio"/> Step by step
+    <input type="radio" name="myradiobtn"
+checked="@(theRadio.Equals("many"))"
+value="many"
+    @onchange="ClickRadio"/> Several steps
+</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 <a class="btn btn-primary" target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_life">Look for
@@ -46,6 +57,7 @@
 
 
     private Data.GameOfLife.Environment e = new Data.GameOfLife.Environment(30, 30);
+    private string theRadio="";
 
     private void IncrementCount()
     {
@@ -53,4 +65,8 @@
         e.nextConwayStep();
     }
 
+    private void ClickRadio(ChangeEventArgs args){
+        theRadio = args.Value.ToString();
+        currentCount++;
+    }
 }
