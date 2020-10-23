@@ -6,14 +6,10 @@
 
 <hr>
 <p>
-    <input type="radio" name="myradiobtn"
-    checked="@(theRadio.Equals("step"))"
-    value="step"
-    @onchange="ClickRadio"/> Step by step
-    <input type="radio" name="myradiobtn"
-checked="@(theRadio.Equals("many"))"
-value="many"
-    @onchange="ClickRadio"/> Several steps
+    <input type="radio" name="myradiobtn" checked="@(theRadio.Equals("step"))" value="step" @onchange="ClickRadio" />
+    Step by step
+    <input type="radio" name="myradiobtn" checked="@(theRadio.Equals("many"))" value="many" @onchange="ClickRadio" />
+    Several steps
 </p>
 
 <div style="display:@(theRadio.Equals("many")?"":"none")">
@@ -21,12 +17,19 @@ value="many"
     Number of cycles:
     <input @bind="cyclesPerTime" /> (internal value: @cyclesPerTime)
     <hr>
+    <br>
+    <select @bind="option">
+        <option value="90">1 st </option>
+        <option value="78.5">2 nd </option>
+    </select>
+    <br>
+    Our option is @option
 </div>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 <a class="btn btn-primary" target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_life">Look for
     Patterns in Wikipedia
-    </a>
+</a>
 
 @{
     if (currentCount == 0)
@@ -59,21 +62,22 @@ value="many"
 
 
 @code {
-    private int cyclesPerTime=0;
+    private int cyclesPerTime = 0;
     private int currentCount = 0;
 
 
 
     private Data.GameOfLife.Environment e = new Data.GameOfLife.Environment(30, 30);
-    private string theRadio="";
-
+    private string theRadio = "";
+    private string option = "";
     private void IncrementCount()
     {
         currentCount++;
         e.nextConwayStep();
     }
 
-    private void ClickRadio(ChangeEventArgs args){
+    private void ClickRadio(ChangeEventArgs args)
+    {
         theRadio = args.Value.ToString();
         currentCount++;
     }
