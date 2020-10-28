@@ -117,12 +117,8 @@
     }
 
     private void Add() {
-        if(isPatternShowed){
-            AddButton="Add";
-        }
-        else{
-            AddButton="Add";
-        }
+        e.put_pattern(row, col, "pentadecathlon");
+        row = col = 0;
     }
 
     private void ClickRadio(ChangeEventArgs args)
