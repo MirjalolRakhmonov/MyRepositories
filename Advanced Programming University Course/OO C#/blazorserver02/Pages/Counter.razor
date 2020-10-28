@@ -26,16 +26,24 @@
     Our option is @option
 </div>
 
+
+<button class="btn btn-primary" @onclick="AddPattern">@AddPatternText</button>
+<div style="display:@(isPatternShowed ? "block" : "none")">
+    <p>Add the pattern pentadecathlon</p>
+</div>
+
 <button class="btn btn-primary" @onclick="IncrementCount">Next</button>
 <a class="btn btn-primary" target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_life">Look for
     Patterns in Wikipedia
 </a>
 
+
+
 @{
     if (currentCount == 0)
     {
-        e.put_pattern(6,6, "pentadecathlon");
-        e.put_pattern(15,15, "pentadecathlon");
+        e.put_pattern(6, 6, "pentadecathlon");
+        e.put_pattern(15, 15, "pentadecathlon");
     }
 }
 
@@ -70,11 +78,29 @@
 
     private Data.GameOfLife.Environment e = new Data.GameOfLife.Environment(30, 30);
     private string theRadio = "";
+    private bool isPatternShowed=false;
+    private string AddPatternText="Add Pattern...";
+
     private string option = "";
     private void IncrementCount()
     {
         currentCount++;
         e.nextConwayStep();
+    }
+    private void AddPattern()
+    {
+        if (isPatternShowed) {
+            isPatternShowed = false;
+        } else {
+            isPatternShowed = true;
+        }
+
+        if(isPatternShowed){
+            AddPatternText="Add Pattern(-)";
+        }
+        else{
+            AddPatternText="Add Pattern...";
+        }
     }
 
     private void ClickRadio(ChangeEventArgs args)
