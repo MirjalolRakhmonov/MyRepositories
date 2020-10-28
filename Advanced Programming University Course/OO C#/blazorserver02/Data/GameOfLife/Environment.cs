@@ -43,6 +43,14 @@ namespace blazorserver02.Data.GameOfLife
             return false;
         }
 
+        public void insert(int i, int j, BioUnit bioUnit)
+        {
+            if (this.rightPos(i, j))
+            {
+                this.cell[i, j] = bioUnit;
+            }
+        }
+
         public int aliveNeighbors(int i, int j)
         {
             int c = 0;
@@ -81,7 +89,6 @@ namespace blazorserver02.Data.GameOfLife
                             aux[i, j] = true;
                     }
 
-
                 }
             for (var i = 0; i < this.rows; i++)
                 for (var j = 0; j < this.cols; j++)
@@ -91,6 +98,16 @@ namespace blazorserver02.Data.GameOfLife
                     else
                         this.die(i, j);
                 }
+        }
+
+        public void put_pattern(int x, int y, string pattern) {
+            if(pattern.Equals("pentadecathlon")) {
+                for(var i=0; i<8; i++)
+                for(var j=0; j<3; j++)
+                if(!((i==1 && j==1) || (i==6 && j==1))) {
+                    this.insert(x+i, y+j, new BioUnit(true));
+                }
+            }
         }
     }
 }

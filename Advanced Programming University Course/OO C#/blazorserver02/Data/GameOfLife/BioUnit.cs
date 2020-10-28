@@ -3,8 +3,8 @@ namespace blazorserver02.Data.GameOfLife
     public class BioUnit
     {
         private bool alive; 
-        public BioUnit() {
-            this.alive = false;
+        public BioUnit(bool alive=false) {
+            this.alive = alive;
         }
         public bool is_alive() {
             return this.alive;
