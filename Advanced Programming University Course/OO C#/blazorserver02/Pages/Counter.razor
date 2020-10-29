@@ -5,6 +5,22 @@
 <hr />
 
 <hr>
+
+@{
+    if(currentCount == 0){	    
+
+        e.live(2,2); 
+        e.live(3,3); 
+        e.live(3,2); 
+        e.live(2,3); 
+
+        e.live(3,8);
+        e.live(2,8);
+        e.live(1,8);
+
+    }	
+}    
+
 <p>
     <input type="radio" name="myradiobtn" checked="@(theRadio.Equals("step"))" value="step" @onchange="ClickRadio" />
     Step by step
@@ -35,7 +51,10 @@
     <input @bind="row" />
     col
     <input @bind="col" /> Pattern pentadecathlon
-    <button class="btn btn-primary" @onclick="Add" >@AddButton</button>
+    <select @bind="">
+
+    </select>
+    <button class="btn btn-primary" @onclick="Add">@AddButton</button>
 
 </div>
 
@@ -110,7 +129,8 @@
         }
     }
 
-    private void Add() {
+    private void Add()
+    {
         e.put_pattern(row, col, "pentadecathlon");
         row = col = 0;
     }
