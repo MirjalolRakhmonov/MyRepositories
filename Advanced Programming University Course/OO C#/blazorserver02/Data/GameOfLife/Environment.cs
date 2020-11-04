@@ -51,6 +51,15 @@ namespace blazorserver02.Data.GameOfLife
             }
         }
 
+        public BioUnit biounit(int i, int j)
+        {
+            if (this.rightPos(i, j))
+            {
+                return this.cell[i, j];
+            }
+            return null;
+        }
+
         public int aliveNeighbors(int i, int j)
         {
             int c = 0;
