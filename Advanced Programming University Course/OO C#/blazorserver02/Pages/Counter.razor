@@ -16,16 +16,27 @@
 }
 
 <svg width ="@svgw" height="@svgh">
+
+    <defs>
+            <filter id="myBlur" x="0" y="0">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+            </filter>
+        </defs>
+
     @for(var i=0; i<@e.total_of_rows() ; i++){
             @for(var j=0; j<@e.total_of_cols() ; j++){
            int cy =(i*9+4+1);
            int cx =(j*9+4+1);
+           int idx = i;
+           int jdx = j;
            @if(e.biounit(i,j)!=null){
-               <circle cx ="@cx" cy="@cy" r="4" fill="#90FA90"/>
+               <circle cx ="@cx" cy="@cy" r="4" fill="#90FA90"
+               filter="url(#myBlur)" @onclick="()=>CellClick(idx,jdx)"/>
            }
            else
            {
-             <circle cx ="@cx" cy="@cy" r="4" fill="#909090"/>
+             <circle cx ="@cx" cy="@cy" r="4" fill="#909090"
+             filter="url(#myBlur)" @onclick="()=>CellClick(idx,jdx)"/>
            }
         }
     }
@@ -131,6 +142,11 @@
 
     private string textAreaCells = "";
     private Data.Environment e = new Data.Environment(30, 30);
+
+    private bool CellClick(int row, int col){
+       e.onOff(row,col);
+       return true;
+    }
 
     private void IncrementCount()
     {
