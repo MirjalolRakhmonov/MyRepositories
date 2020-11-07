@@ -7,34 +7,29 @@
 <hr>
 
 @{
-    if (currentCount == 0)
-    {
-        e.put_pattern(6, 6, "Pentadecathlon");
+    //only the first time (initial pattern)
+    if(currentCount==0){
+        e.put_pattern(6,6,"Pentadecathlon");
     }
-
-    int svgh = e.total_of_rows() * 9 + 2;
-    int svgw = e.total_of_cols() * 9 + 2;
+    int svgh = e.total_of_rows()*9+2;
+    int svgw = e.total_of_cols()*9+2;
 }
 
-<svg width="@svgw" height=>"@svgh">
-    @for (var i = 0; i < @e.total_of_rows(); i++)
-    {
-        @for (var j = 0; j < @e.total_of_cols(); j++)
-        {
-            int cy = (i * 9 + 4 + 1);
-            int cx = (i * 9 + 4 + 1);
-            @if (e.biounit(i, j) != null)
-            {
-                <circle cx="@cx" cy="@cy" r="4" fill="#90FA90" />
-            }
-            else
-            {
-                <circle cx="@cx" cy="@cy" r="4" fill="#909090" />
-            }
+<svg width ="@svgw" height="@svgh">
+    @for(var i=0; i<@e.total_of_rows() ; i++){
+            @for(var j=0; j<@e.total_of_cols() ; j++){
+           int cy =(i*9+4+1);
+           int cx =(j*9+4+1);
+           @if(e.biounit(i,j)!=null){
+               <circle cx ="@cx" cy="@cy" r="4" fill="#90FA90"/>
+           }
+           else
+           {
+             <circle cx ="@cx" cy="@cy" r="4" fill="#909090"/>
+           }
         }
     }
-
-</svg>
+    </svg>
 
 <p>
     <input type="radio" name="myradiobtn" checked="@(theRadio.Equals("step"))" value="step" @onchange="ClickRadio" />
@@ -135,9 +130,7 @@
     private int col = 0;
 
     private string textAreaCells = "";
-
-
-    private Data.GameOfLife.Environment e = new Data.GameOfLife.Environment(30, 30);
+    private Data.Environment e = new Data.Environment(30, 30);
 
     private void IncrementCount()
     {
@@ -176,13 +169,13 @@
     private void AddCell()
     {
         string[] cells = textAreaCells.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-
+ 
         foreach (string cell in cells)
         {
             var devidedCells = cell.Split(',');
-            e.insert(int.Parse(devidedCells[0]), int.Parse(devidedCells[1]), new Data.GameOfLife.BioUnit(true));
+            e.insert(int.Parse(devidedCells[0]), int.Parse(devidedCells[1]), new Data.BioUnit(int.Parse(devidedCells[0]), int.Parse(devidedCells[1]),e));
         }
-
+ 
         textAreaCells = "";
     }
 }

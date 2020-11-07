@@ -1,7 +1,7 @@
 
 namespace blazorserver02.Data
 {
-    public class Rabbit : Data.RabbitsAndCarrots.BioUnit
+    public class Rabbit : Data.BioUnit
     {
         private int living = 0;
         private int livingTop = 6;
@@ -10,9 +10,9 @@ namespace blazorserver02.Data
 
         private int hungryTop = 4;
 
-        public Rabbit(int x, int y, Data.RabbitsAndCarrots.Environment e) : base(x, y, e, "#fafafa") { }
+        public Rabbit(int x, int y, Data.Environment e) : base(x, y, e) { }
 
-        public override bool will_i_live()
+        public override bool will_I_live()
         {
             this.hungry++;
             this.living++;
