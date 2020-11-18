@@ -1,7 +1,33 @@
-﻿@page "/"
+﻿@page "/towers"
 
-<h1>Hello, world!</h1>
+<h1>Towers of Hanoi</h1>
 
-Welcome to your new app.
+<p>Current count: @currentCount</p>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+<svg width="1500" height="500">
+
+    <rect x="100" y="200" width="30" height="300" fill="black" />
+    <rect x="30" y="470" width="180" height="30" fill="black" />
+
+    <rect x="400" y="200" width="30" height="300" fill="black" />
+    <rect x="330" y="470" width="180" height="30" fill="black" />
+
+    <rect x="700" y="200" width="30" height="300" fill="black" />
+    <rect x="630" y="470" width="180" height="30" fill="black" />
+
+</svg>
+
+<br>
+<br>
+<br>
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
