@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace blazorserver01.Data
 {
@@ -10,6 +12,5 @@ namespace blazorserver01.Data
         public HanoiGame(){
  
         }
-        
     }
 }
