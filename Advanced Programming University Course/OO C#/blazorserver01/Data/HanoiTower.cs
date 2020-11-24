@@ -5,39 +5,60 @@ namespace blazorserver01.Data
 {
     public class HanoiTower : HanoiGame
     {
-        private boolean selected; 
+        private bool selected = false;
+        public int currentDiskCounter = 0;
+        public List<HanoiDisk> hanoiDisks = new List<HanoiDisk>();
+        public HanoiGame parent;
 
-        private int currentDiskCounter=0;   
+        public HanoiTower(HanoiGame parent)
+        {
+            this.parent = parent;
+        }
 
-        private List<HanoiDisk> disks=new List<HanoiDisk>();
-
-        public boolean pushDisk(HanoiDisk d){
+        public bool pushDisk(HanoiDisk d)
+        {
+            hanoiDisks.Add(d);
+            hanoiDisks.Remove(null);
             currentDiskCounter++;
-            disks.Add(d);
+
+            if (currentDiskCounter == 1)
+                startDiskCounter();
+            return true;
         }
 
-        public HanoiDisk popDisk() {
-            HanoiDisk pop=disks[disks.Count-1];
-            disks.RemoveAt(disks.Count-1);
+        public HanoiDisk popDisk()
+        {
+            HanoiDisk d = getNextDisk();
+            this.hanoiDisks.Remove(d);
             currentDiskCounter--;
-            
-            return pop;
+            return d;
         }
 
-        public void startDiskCounter() {
-            Console.WriteLine("Tower: "+{HanoiGame.getTower()} + {currentDiskCounter}" disks");
+        public void startDiskCounter()
+        {
+            HanoiDisk startDisk;
+            if (hanoiDisks.Count == 0)
+                startDisk = null;
+            else
+                startDisk = this.hanoiDisks[0];
+
         }
 
-        public HanoiDisk getNextDisk() {
-
+        public HanoiDisk getNextDisk()
+        {
+            if (this.hanoiDisks.Count != 0)
+                return this.hanoiDisks[this.hanoiDisks.Count - 1];
+            return null;
         }
 
-        public bool is_selected() {
+        public bool is_selected()
+        {
             return selected;
         }
 
-        public void selection(bool trueForSelected) {
-            
+        public void selection(bool trueForSelected)
+        {
+            selected = trueForSelected;
         }
     }
 }
